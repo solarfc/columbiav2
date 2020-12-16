@@ -1,0 +1,135 @@
+/*
+    review style
+ */
+
+.review {
+  padding: 61px 0 80px;
+
+  .container {
+    position: relative;
+  }
+
+  picture {
+    display: block;
+    position: absolute;
+    top: -61px;
+    left: -400px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__content {
+    width: 550px;
+    margin-left: auto;
+    position: relative;
+    z-index: 9;
+
+    h3 {
+
+    }
+
+    &-slider {
+      margin: 31px auto 32px;
+      position: relative;
+
+      &__block {
+
+        .slick-list {
+          box-sizing: border-box;
+          padding: 20px 0;
+          position: relative;
+          margin: 0 -27px;
+        }
+
+        .slick-slide {
+          margin: 0 27px;
+        }
+
+        figure {
+          max-width: 550px;
+          margin: 0 auto;
+          padding: 18px 42px 49px;
+          background: #FFFFFF;
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+          border-radius: 20px;
+
+          h4 {
+            margin-bottom: 32px;
+          }
+
+          p {
+
+          }
+        }
+
+        ul.slick-dots {
+          display: inline-flex;
+          position: absolute;
+          bottom: 41px;
+          right: 62.5px;
+          z-index: 11;
+
+          li {
+            box-sizing: border-box;
+            width: 7px;
+            height: 7px;
+            border: 1px solid #60697a;
+            background: transparent;
+            border-radius: 50%;
+            cursor: pointer;
+            margin: 0 4.5px;
+            transition: all 0.3s ease-in-out;
+
+            button {
+              display: none;
+            }
+
+            &.slick-active {
+              background: #60697a;
+            }
+          }
+        }
+      }
+
+      &__nav {
+        width: 121px;
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        bottom: 37px;
+        right: 42px;
+
+        .prev-arrow, .next-arrow {
+          width: 12px;
+          height: 14px;
+          background: url("../img/review/arrow.png") no-repeat center/cover;
+          cursor: pointer;
+        }
+
+        .next-arrow {
+          transform: scale(-1, 1);
+        }
+      }
+    }
+
+    h5 {
+      text-align: center;
+      color: #464f62;
+      cursor: pointer;
+      box-sizing: border-box;
+      width: 334px;
+      padding: 12px 0 11px;
+      border: 1px solid #464f62;
+      border-radius: 45px;
+      margin: 0 auto;
+      transition: all 0.5s ease-in-out;
+
+      &:hover {
+        color: #fff;
+        background: #464f62;
+      }
+    }
+  }
+}

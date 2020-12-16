@@ -1,0 +1,192 @@
+/*
+    advantages style
+ */
+
+.advantages {
+
+  padding: 79px 0 80px;
+
+  &__content {
+    position: relative;
+
+    &-img {
+      width: 74%;
+      position: absolute;
+      top: -19px;
+      left: -27.77%;
+
+      img {
+        width: 100%;
+      }
+
+      figure {
+        width: 37px;
+        height: 37px;
+        position: absolute;
+
+        svg {
+          width: 100%;
+          height: 100%;
+
+          circle {
+            transition: all 0.5s ease-in-out;
+          }
+        }
+
+        &:before, &:after {
+          content: "";
+          display: block;
+          background: #fff;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+
+        &:before {
+          width: 2px;
+          height: 14px;
+        }
+
+        &:after {
+          width: 14px;
+          height: 2px;
+        }
+
+        &.first {
+          top: 13.58%;
+          right: 39.17%;
+        }
+
+        &.second {
+          top: 38.28%;
+          right: 37.58%;
+        }
+
+        &.third {
+          top: 42.32%;
+          left: 45.86%;
+        }
+
+        &.fourth {
+          top: 60.23%;
+          left: 37.37%;
+        }
+
+        &.fifth {
+          width: 41px;
+          height: 41px;
+          top: 65.9%;
+          right: 21.35%;
+        }
+
+        &.active {
+
+          svg {
+
+            circle {
+              &:nth-child(1) {
+                fill: #66DAFF;
+                fill-opacity: 0.5;
+              }
+
+              &:nth-child(2) {
+                stroke: #66DAFF;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &-info {
+      width: 59%;
+      max-width: 652px;
+      margin-left: auto;
+
+      h3 {
+        margin: 0 0 30px 10px;
+      }
+
+      ul {
+
+        li {
+          box-sizing: border-box;
+          padding-left: 57px;
+          color: #464f62;
+          margin-bottom: 24.75px;
+          position: relative;
+
+          h4 {
+
+          }
+
+          p {
+
+          }
+
+          &:before {
+            content: "";
+            font-family: $b, sans-serif;
+            font-size: 24px;
+            line-height: 33px;
+            text-align: center;
+            color: #464f62;
+            display: block;
+            width: 47px;
+            padding: 7px 0;
+            border-radius: 50%;
+            position: absolute;
+            top: -7px;
+            left: 0;
+            transition: all 0.5s ease-in-out;
+          }
+
+          &:first-child {
+
+            &:before {
+              content: "01";
+            }
+          }
+
+          &:nth-child(2) {
+
+            &:before {
+              content: "02";
+            }
+          }
+
+          &:nth-child(3) {
+
+            &:before {
+              content: "03";
+            }
+          }
+
+          &:nth-child(4) {
+
+            &:before {
+              content: "04";
+            }
+          }
+
+          &:last-child {
+            margin-bottom: 0;
+
+            &:before {
+              content: "05";
+            }
+          }
+
+          &.active {
+
+            &:before {
+              color: #fff;
+              background: #464f62;
+            }
+          }
+        }
+      }
+    }
+  }
+}

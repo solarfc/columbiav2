@@ -1,0 +1,116 @@
+/*
+    video style
+ */
+
+.video {
+  padding: 80px 0;
+  position: relative;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-block {
+      width: 58%;
+      max-width: 645px;
+      border-radius: 20px;
+      background: #000;
+
+      figure {
+        height: 450px;
+        position: relative;
+        border-radius: inherit;
+        filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.25));
+        cursor: pointer;
+
+        @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+        }
+
+        img {
+          border-radius: inherit;
+        }
+
+        iframe {
+          border-radius: inherit;
+        }
+
+        .video-play {
+          width: 80px;
+          height: 80px;
+          background: url("../img/video/video-play.png") no-repeat center/cover;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          pointer-events: none;
+        }
+      }
+    }
+
+    &-info {
+      width: 37%;
+      max-width: 406px;
+
+      ul {
+
+        li {
+          box-sizing: border-box;
+          padding-left: 100px;
+          position: relative;
+
+          p {
+            color: #464f62;
+          }
+
+          &:before {
+            content: "";
+            display: block;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+          }
+
+          &:first-child {
+
+            &:before {
+              background: url("../img/video/1.png") no-repeat center/auto, #464f62;
+            }
+          }
+
+          &:nth-child(2) {
+            margin: 101.5px auto;
+
+            &:before {
+              background: url("../img/video/2.png") no-repeat center/auto, #464f62;
+            }
+          }
+
+          &:last-child {
+
+            &:before {
+              background: url("../img/video/3.png") no-repeat center/auto, #464f62;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1440px;
+    background: url("../img/video/bg.png") no-repeat center/cover;
+    position: absolute;
+    top: -255px;
+    left: 0;
+  }
+}

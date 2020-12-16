@@ -1,0 +1,65 @@
+/*
+    header style
+ */
+
+.header {
+  background: linear-gradient(97.57deg, rgba(70, 79, 98, 0.8) 0%, rgba(180, 195, 208, 0.8) 100%), url("../img/header/bg.jpg") no-repeat center/cover;
+  padding: 47px 0 65px;
+
+  &__content {
+    position: relative;
+
+    img.logo {
+
+    }
+
+    &-img {
+      width: 92%;
+      position: absolute;
+      top: -44.21px;
+      right: -319.98px;
+
+      img {
+        width: 100%;
+      }
+
+      .sale {
+        position: absolute;
+        top: 10.50%;
+        right: 31.18%
+      }
+    }
+
+    h1 {
+      margin: 51px 0 20px;
+    }
+
+    p.title {
+
+    }
+
+    .price {
+      margin: 30px 0;
+
+      span {
+
+        &.new-price {
+          position: relative;
+          display: inline-block;
+
+          &:after {
+            content: "";
+            display: block;
+            width: 105px;
+            height: 91px;
+            background: url("../img/header/arrow.png") no-repeat center/cover;
+            transform: rotate(100.8deg);
+            position: absolute;
+            top: 45.4px;
+            right: -90.03px;
+          }
+        }
+      }
+    }
+  }
+}
