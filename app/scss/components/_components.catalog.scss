@@ -6,6 +6,10 @@
   padding-bottom: 80px;
   position: relative;
 
+  @include mq(md) {
+    padding-bottom: 35px;
+  }
+
   h4 {
     color: #fff;
   }
@@ -18,6 +22,16 @@
     top: 52px;
     right: 40px;
 
+    @include mq(lg) {
+      right: 20px;
+    }
+
+    @include mq(md) {
+      position: static;
+      display: block;
+      text-align: center;
+    }
+
     span {
 
       &.old-price {
@@ -25,6 +39,10 @@
         line-height: 25px;
         order: 2;
         margin: 3px 0 0;
+
+        @include mq(md) {
+          margin: 0 20px 0 0;
+        }
       }
 
       &.new-price {
@@ -99,6 +117,17 @@
     }
   }
 
+  .decor {
+    background: url("../img/catalog/line.png") no-repeat center/cover;
+    top: -323.23px;
+    right: -162.61px;
+    z-index: -1;
+
+    @include mq(md) {
+      display: none;
+    }
+  }
+
   &__shoe {
     position: relative;
     z-index: 9;
@@ -109,17 +138,41 @@
       background: #464f62;
       border-radius: 20px;
       position: relative;
+      z-index: 11;
+      overflow: hidden;
+
+      @include mq(lg) {
+        padding: 64px 20px 51px;
+      }
+
+      @include mq(md) {
+        padding: 15px 25px;
+      }
 
       img.logo {
         width: 178px;
         position: absolute;
         top: 58px;
         left: 40px;
+
+        @include mq(lg) {
+          left: 20px;
+        }
+
+        @include mq(md) {
+          position: static;
+          margin: 0 auto;
+        }
       }
 
       h4 {
         width: 415px;
         margin-left: auto;
+
+        @include mq(md) {
+          margin: 10px auto 1px;
+          text-align: center;
+        }
       }
 
       .price {
@@ -130,6 +183,10 @@
 
         img.big {
           position: absolute;
+
+          @include mq(md) {
+            position: static;
+          }
         }
 
         .image {
@@ -140,6 +197,16 @@
           position: absolute;
           bottom: 95px;
           left: 5%;
+
+          @include mq(lg) {
+            left: 20px;
+          }
+
+          @include mq(md) {
+            width: 100%;
+            position: static;
+            margin: 0 auto;
+          }
 
           a {
             width: 29%;
@@ -157,6 +224,10 @@
       ul {
         width: 415px;
         margin: 62px 0 30px auto;
+
+        @include mq(md) {
+          margin: 15px auto 34px;
+        }
 
         li {
           display: flex;
@@ -184,11 +255,24 @@
         display: flex;
         justify-content: space-between;
 
+        @include mq(md) {
+          margin: 0 auto;
+        }
+
+        @include mq(s) {
+          display: block;
+        }
+
         .size {
           width: 90px;
           display: flex;
           flex-wrap: wrap;
           justify-content: space-between;
+
+          @include mq(s) {
+            width: 265px;
+            margin: 0 auto 39px;
+          }
 
           span {
             text-align: center;
@@ -229,6 +313,12 @@
               top: -19px;
               right: -53px;
               opacity: 0;
+
+              @include mq(s) {
+                top: calc(100% + 5px);
+                left: 50%;
+                transform: translateX(-50%);
+              }
             }
 
             &.active {
@@ -292,12 +382,19 @@
 
             &:nth-child(3), &:nth-child(4) {
               margin: 27px 0;
+
+              @include mq(s) {
+                margin: 0;
+              }
             }
           }
         }
 
         form {
 
+          @include mq(s) {
+            margin: 0 auto;
+          }
         }
       }
 
@@ -306,6 +403,16 @@
         position: absolute;
         bottom: 42px;
         left: 5%;
+
+        @include mq(lg) {
+          left: 20px;
+        }
+
+        @include mq(md) {
+          position: static;
+          text-align: center;
+          margin-top: 15px;
+        }
 
         span {
           color: #66daff;
@@ -317,13 +424,27 @@
 
       .catalog__shoe-model {
 
-        &-img {
+        &__img {
 
           img.big {
             width: 50%;
             max-width: 553px;
             top: 61px;
             left: 3.57%;
+
+            @include mq(lg) {
+              top: 101px;
+              left: 10px;
+            }
+
+            @include mq(md) {
+              width: auto;
+            }
+
+            @include mq(s) {
+              width: 92%;
+              min-width: 267px;
+            }
           }
         }
       }
@@ -332,6 +453,10 @@
     &.bugaboot {
       margin: 50px auto;
 
+      @include mq(md) {
+        margin: 15px auto;
+      }
+
       .catalog__shoe-model {
 
         &__img {
@@ -339,11 +464,23 @@
           img.big {
             top: 25px;
             left: 4.46%;
+
+            @include mq(lg) {
+              top: 45px;
+              left: -10px;
+            }
+
+            @include mq(s) {
+              width: 92%;
+              min-width: 267px;
+              max-width: 553px;
+            }
           }
         }
       }
 
       &:before, &:after {
+        /* скрыть на lg */
         content: "";
         display: block;
         width: 171px;
@@ -351,6 +488,10 @@
         background: url("../img/catalog/logo.png") no-repeat center/cover;
         position: absolute;
         top: -155px;
+
+        @include mq(lg) {
+          display: none;
+        }
       }
 
       &:before {
@@ -371,14 +512,31 @@
           img.big {
             top: 61px;
             left: 17.68%;
+
+            @include mq(lg) {
+              left: 15.68%;
+            }
+
+            @include mq(s) {
+              width: 46%;
+              min-width: 135px;
+              max-width: 280px;
+              margin: 0 auto;
+              left: 0;
+            }
           }
         }
       }
 
       &:before, &:after {
+        /* скрыть на lg */
         content: "";
         display: block;
         position: absolute;
+
+        @include mq(lg) {
+          display: none;
+        }
       }
 
       &:before {
@@ -404,32 +562,80 @@
     position: relative;
     z-index: 9;
 
+    @include mq(md) {
+      margin-top: 15px;
+    }
+
     &-block {
       box-sizing: border-box;
       padding: 60px 40px 45px;
       background: #464F62;
       border-radius: 20px;
       position: relative;
+      z-index: 11;
+      overflow: hidden;
+
+      @include mq(lg) {
+        padding: 60px 20px 45px;
+      }
+
+      @include mq(md) {
+        padding: 15px 25px;
+      }
 
       h4 {
         text-transform: uppercase;
         margin: 0 0 60px 245px;
+
+        @include mq(lg) {
+          margin-left: 225px;
+        }
+
+        @include mq(md) {
+          margin: 0 auto;
+          text-align: center;
+        }
       }
 
       .price {
 
+        @include mq(md) {
+          margin: 1px auto 15px;
+        }
       }
 
       &__img {
         position: absolute;
         top: 26px;
         left: 40px;
+
+        @include mq(lg) {
+          top: 50%;
+          left: 20px;
+          transform: translateY(-50%);
+        }
+
+        @include mq(md) {
+          position: static;
+          margin: 0 auto;
+          transform: none;
+        }
       }
 
       ul {
         position: absolute;
         top: 153px;
         right: 40px;
+
+        @include mq(lg) {
+          right: 20px;
+        }
+
+        @include mq(md) {
+          position: static;
+          max-width: 265px;
+          margin: 15px auto;
+        }
 
         li {
 
@@ -453,8 +659,26 @@
         color: #fff;
         margin-left: 245px;
 
+        @include mq(lg) {
+          margin-left: 225px;
+          max-width: 400px;
+        }
+
+        @include mq(md) {
+          max-width: 100%;
+          margin: 0 auto;
+        }
+
         &:nth-of-type(2) {
           margin: 37.5px 0 37.5px 245px;
+
+          @include mq(lg) {
+            margin-left: 225px;
+          }
+
+          @include mq(md) {
+            margin: 20px auto;
+          }
         }
       }
 
@@ -462,6 +686,15 @@
         position: absolute;
         bottom: 51px;
         right: 40px;
+
+        @include mq(lg) {
+          right: 20px;
+        }
+
+        @include mq(md) {
+          position: static;
+          margin: 15px auto 0;
+        }
       }
     }
   }

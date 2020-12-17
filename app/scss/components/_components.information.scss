@@ -1,0 +1,190 @@
+/*
+    information style
+ */
+
+.information {
+  background: linear-gradient(97.57deg, rgba(70, 79, 98, 0.8) 0%, rgba(180, 195, 208, 0.8) 100%), url("../img/information/bg.jpg") no-repeat center/cover;
+  padding: 62px 0 176px;
+
+  @include mq(md) {
+    padding: 22px 0 0;
+  }
+
+  .container {
+    position: relative;
+
+    .decor {
+      background: url("../img/information/line.png") no-repeat center/cover;
+      top: -225px;
+      right: -348.61px;
+
+      @include mq(md) {
+        display: none;
+      }
+    }
+  }
+
+  .delivery {
+    position: relative;
+    z-index: 11;
+
+    h3 {
+      text-align: center;
+      color: #fff;
+      margin-bottom: 70px;
+      position: relative;
+      z-index: 11;
+
+      @include mq(md) {
+        margin-bottom: 33px;
+      }
+    }
+
+    &__content {
+      display: flex;
+      justify-content: space-evenly;
+
+      @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        justify-content: space-around;
+      }
+
+      @include mq(lg) {
+        justify-content: space-between;
+      }
+
+      @include mq(s) {
+        flex-wrap: wrap;
+        max-width: 540px;
+        margin: 0 auto;
+      }
+
+      &-block {
+        text-align: center;
+
+        @include mq(s) {
+          width: 49%;
+          margin-bottom: 35px;
+        }
+
+        img {
+
+        }
+
+        p {
+          color: #fff;
+        }
+
+        &:nth-of-type(3) {
+
+          @include mq(xs) {
+            margin-bottom: 0;
+          }
+        }
+
+        &:last-child {
+
+          @include mq(s) {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .banner {
+    position: relative;
+    z-index: 11;
+
+    &__content {
+
+      img.logo {
+        margin: 80px 0;
+
+        @include mq(md) {
+          margin: 31px auto 15px;
+        }
+      }
+
+      h2 {
+
+        @include mq(md) {
+          text-align: center;
+          margin: 0 auto;
+        }
+      }
+
+      .price {
+        margin: 20px 0;
+
+        @include mq(md) {
+          margin: 15px auto;
+          text-align: center;
+        }
+      }
+
+      .to-order {
+
+        @include mq(md) {
+          margin: 0 auto;
+        }
+
+        p {
+          margin-top: 20px;
+
+          @include mq(md) {
+            text-align: center;
+            margin-top: 7px;
+          }
+        }
+      }
+
+      &-img {
+        width: 131%;
+        max-width: 1461px;
+        position: absolute;
+        bottom: -231px;
+        right: -50.625%;
+        z-index: -1;
+
+        @include mq(lg) {
+          right: -48.625%;
+        }
+
+        @include mq(md) {
+          width: 100%;
+          position: relative;
+          top: 0;
+          right: 0;
+          margin: -52px 0;
+        }
+
+        @include mq(s) {
+          width: 119%;
+          min-width: 346px;
+          left: -5%;
+        }
+
+        img {
+          width: 100%;
+        }
+
+        .sale {
+          position: absolute;
+          top: 54.19%;
+          right: 49.3%;
+
+          @include mq(md) {
+            top: 33%;
+            right: 0;
+            transform: rotate(30deg);
+          }
+
+          @include mq(s) {
+            top: 41%;
+            right: 15%;
+          }
+        }
+      }
+    }
+  }
+}

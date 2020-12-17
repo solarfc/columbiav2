@@ -44,8 +44,8 @@ window.onload = function () {
         dots: true,
         arrows: true,
         prevArrow: $('.prev-arrow'),
-        nextArrow: $('.next-arrow')
-    })
+        nextArrow: $('.next-arrow'),
+    });
 
     // /*
     //     change href on mobile

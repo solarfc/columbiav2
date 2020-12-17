@@ -6,8 +6,37 @@
   background: linear-gradient(97.57deg, rgba(70, 79, 98, 0.8) 0%, rgba(180, 195, 208, 0.8) 100%), url("../img/header/bg.jpg") no-repeat center/cover;
   padding: 47px 0 65px;
 
+  @include mq(md) {
+    padding: 15px 0 25px;
+  }
+
+  .container {
+    position: relative;
+
+    .decor {
+      background: url("../img/header/line.png") no-repeat center/cover;
+      top: -301.64px;
+      left: -565px;
+
+      @include mq(md) {
+        left: -445px;
+      }
+
+      @include mq(s) {
+        left: -345px;
+      }
+
+      @include mq(xs) {
+        background: url("../img/header/line-md.png") no-repeat center/cover;
+        top: -318.68px;
+        left: -180.69px;
+      }
+    }
+  }
+
   &__content {
     position: relative;
+    z-index: 9;
 
     img.logo {
 
@@ -19,6 +48,30 @@
       top: -44.21px;
       right: -319.98px;
 
+      @include mq(xl) {
+        right: -225.98px;
+      }
+
+      @include mq(lg) {
+        width: 75%;
+        top: 160px;
+        right: -125.98px;
+      }
+
+      @include mq(md) {
+        width: 100%;
+        position: relative;
+        top: 0;
+        left: -7%;
+        margin: -25px 0 -55px;
+      }
+
+      @include mq(xs) {
+        width: 129%;
+        left: -22.41%;
+        margin: 0 0 -33px;
+      }
+
       img {
         width: 100%;
       }
@@ -26,16 +79,41 @@
       .sale {
         position: absolute;
         top: 10.50%;
-        right: 31.18%
+        right: 31.18%;
+
+        @include mq(lg) {
+          top: 29.5%;
+          right: 19.18%;
+        }
+
+        @include mq(md) {
+          top: 15px;
+          right: 60px;
+        }
+
+        @include mq(s) {
+          right: 30px;
+        }
+
+        @include mq(xs) {
+          right: 20px;
+        }
       }
     }
 
     h1 {
       margin: 51px 0 20px;
+
+      @include mq(md) {
+        margin: 0 0 0;
+      }
     }
 
     p.title {
 
+      @include mq(s) {
+        display: none;
+      }
     }
 
     .price {
@@ -57,7 +135,37 @@
             position: absolute;
             top: 45.4px;
             right: -90.03px;
+
+            @include mq(s) {
+              width: 76px;
+              height: 66px;
+              top: -10px;
+              right: -76px;
+              transform: rotate(32.66deg);
+            }
+
+            @include mq(xs) {
+              width: 47px;
+              height: 41px;
+              top: -5px;
+              right: -47px;
+            }
           }
+        }
+      }
+    }
+
+    .to-order {
+
+      @include mq(s) {
+        margin: 0 auto 0;
+      }
+
+      p {
+
+        @include mq(md) {
+          margin-top: 15px;
+          text-align: center;
         }
       }
     }

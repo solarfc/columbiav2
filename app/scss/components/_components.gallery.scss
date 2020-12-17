@@ -3,7 +3,11 @@
  */
 
 .gallery {
-  padding: 43px 0;
+  padding: 0 0 43px;
+
+  @include mq(md) {
+    padding: 0;
+  }
 
   &__content {
     box-sizing: border-box;
@@ -21,6 +25,10 @@
       transition: all 0.5s ease-in-out;
       position: relative;
       z-index: 9;
+
+      @include mq(xxl) {
+        width: 19%;
+      }
 
       img {
         width: 100%;

@@ -3,17 +3,53 @@
  */
 
 .advantages {
+  padding: 79px 0 123px;
+  position: relative;
+  overflow: hidden;
+  background: #dbe3f1;
 
-  padding: 79px 0 80px;
+  @include mq(md) {
+    padding: 12px 0 35px;
+  }
+
+  .container {
+    position: relative;
+
+    .decor {
+      background: url("../img/advantages/line.png") no-repeat center/cover;
+      top: -282.23px;
+      right: -562px;
+
+      @include mq(md) {
+        display: none;
+      }
+    }
+  }
 
   &__content {
     position: relative;
+    z-index: 9;
 
     &-img {
       width: 74%;
       position: absolute;
       top: -19px;
       left: -27.77%;
+
+      @include mq(xl) {
+        width: 60%;
+        top: 50%;
+        left: -6.77%;
+        transform: translateY(-50%);
+      }
+
+      @include mq(md) {
+        position: relative;
+        width: 100%;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
 
       img {
         width: 100%;
@@ -104,8 +140,30 @@
       max-width: 652px;
       margin-left: auto;
 
+      @include mq(xl) {
+        width: 51%;
+      }
+
+      @include mq(lg) {
+        width: 53%;
+      }
+
+      @include mq(md) {
+        width: 100%;
+        max-width: 100%;
+      }
+
       h3 {
         margin: 0 0 30px 10px;
+
+        @include mq(lg) {
+          margin-left: 0;
+        }
+
+        @include mq(md) {
+          margin: 5.62px auto 15px;
+          text-align: center;
+        }
       }
 
       ul {
@@ -140,6 +198,18 @@
             top: -7px;
             left: 0;
             transition: all 0.5s ease-in-out;
+
+            @include mq(s) {
+              font-size: 21px;
+              line-height: 29px;
+              padding: 9px 0;
+            }
+
+            @include mq(xs) {
+              font-size: 18px;
+              line-height: 25px;
+              padding: 11px 0;
+            }
           }
 
           &:first-child {

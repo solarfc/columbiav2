@@ -3,10 +3,28 @@
  */
 
 .review {
+  background: #dbe3f1;
   padding: 61px 0 80px;
+  position: relative;
+  z-index: 15;
+  overflow: hidden;
+
+  @include mq(md) {
+    padding: 0 0 35px;
+  }
 
   .container {
     position: relative;
+
+    .decor {
+      background: url("../img/review/line.png") no-repeat center/cover;
+      top: -263.23px;
+      right: -563px;
+
+      @include mq(md) {
+        display: none;
+      }
+    }
   }
 
   picture {
@@ -14,6 +32,10 @@
     position: absolute;
     top: -61px;
     left: -400px;
+
+    @include mq(md) {
+      position: static;
+    }
 
     img {
       width: 100%;
@@ -26,13 +48,26 @@
     position: relative;
     z-index: 9;
 
+    @include mq(md) {
+      width: 100%;
+      max-width: 550px;
+      margin: -55px auto 0;
+    }
+
     h3 {
 
+      @include mq(md) {
+        text-align: center;
+      }
     }
 
     &-slider {
       margin: 31px auto 32px;
       position: relative;
+
+      @include mq(md) {
+        margin: -5px auto;
+      }
 
       &__block {
 
@@ -55,8 +90,16 @@
           box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
           border-radius: 20px;
 
+          @include mq(md) {
+            padding: 15px 12px 32px;
+          }
+
           h4 {
             margin-bottom: 32px;
+
+            @include mq(md) {
+              margin-bottom: 16px;
+            }
           }
 
           p {
@@ -70,6 +113,13 @@
           bottom: 41px;
           right: 62.5px;
           z-index: 11;
+
+          @include mq(md) {
+            justify-content: center;
+            bottom: 35px;
+            left: 50%;
+            transform: translateX(-50%);
+          }
 
           li {
             box-sizing: border-box;
@@ -100,6 +150,10 @@
         position: absolute;
         bottom: 37px;
         right: 42px;
+
+        @include mq(md) {
+          display: none;
+        }
 
         .prev-arrow, .next-arrow {
           width: 12px;
