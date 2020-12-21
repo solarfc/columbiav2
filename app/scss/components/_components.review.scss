@@ -37,6 +37,15 @@
       position: static;
     }
 
+    @include mq(xs) {
+      width: 112%;
+      min-width: 320px;
+      position: relative;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
     img {
       width: 100%;
     }
@@ -52,6 +61,10 @@
       width: 100%;
       max-width: 550px;
       margin: -55px auto 0;
+    }
+
+    @include mq(xs) {
+      margin-top: -35px;
     }
 
     h3 {
@@ -108,7 +121,6 @@
         }
 
         ul.slick-dots {
-          display: inline-flex;
           position: absolute;
           bottom: 41px;
           right: 62.5px;
@@ -119,26 +131,6 @@
             bottom: 35px;
             left: 50%;
             transform: translateX(-50%);
-          }
-
-          li {
-            box-sizing: border-box;
-            width: 7px;
-            height: 7px;
-            border: 1px solid #60697a;
-            background: transparent;
-            border-radius: 50%;
-            cursor: pointer;
-            margin: 0 4.5px;
-            transition: all 0.3s ease-in-out;
-
-            button {
-              display: none;
-            }
-
-            &.slick-active {
-              background: #60697a;
-            }
           }
         }
       }
@@ -179,6 +171,12 @@
       border-radius: 45px;
       margin: 0 auto;
       transition: all 0.5s ease-in-out;
+
+      @include mq(xs) {
+        width: 100%;
+        max-width: 334px;
+        padding: 13px 0;
+      }
 
       &:hover {
         color: #fff;

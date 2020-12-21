@@ -43,6 +43,10 @@
         @include mq(md) {
           margin: 0 20px 0 0;
         }
+
+        @include mq(xs) {
+          margin: 0 15px 0 0;
+        }
       }
 
       &.new-price {
@@ -55,6 +59,12 @@
 
   form {
     width: 265px;
+
+    @include mq(xs) {
+      width: 91%;
+      min-width: 265px;
+      max-width: 390px;
+    }
 
     .form-group {
 
@@ -149,6 +159,10 @@
         padding: 15px 25px;
       }
 
+      @include mq(xs) {
+        padding: 15px 12px;
+      }
+
       img.logo {
         width: 178px;
         position: absolute;
@@ -163,6 +177,10 @@
           position: static;
           margin: 0 auto;
         }
+
+        @include mq(xs) {
+          min-width: 178px;
+        }
       }
 
       h4 {
@@ -172,6 +190,10 @@
         @include mq(md) {
           margin: 10px auto 1px;
           text-align: center;
+        }
+
+        @include mq(xs) {
+          width: 100%;
         }
       }
 
@@ -213,6 +235,12 @@
             max-width: 157px;
             border-radius: 20px;
 
+            @include mq(xs) {
+              width: 31%;
+              min-width: 84px;
+              border-radius: 10px;
+            }
+
             img {
               width: 100%;
               border-radius: inherit;
@@ -229,6 +257,11 @@
           margin: 15px auto 34px;
         }
 
+        @include mq(xs) {
+          width: 100%;
+          max-width: 415px;
+        }
+
         li {
           display: flex;
           justify-content: space-between;
@@ -239,11 +272,19 @@
             &:nth-child(1) {
               display: inline-block;
               width: 249px;
+
+              @include mq(xs) {
+                width: 139px;
+              }
             }
 
             &:nth-child(2) {
               display: inline-block;
               width: calc(100% - 249px);
+
+              @include mq(xs) {
+                width: calc(100% - 139px);
+              }
             }
           }
         }
@@ -261,6 +302,10 @@
 
         @include mq(s) {
           display: block;
+        }
+
+        @include mq(xs) {
+          width: 100%;
         }
 
         .size {
@@ -308,6 +353,7 @@
             &:after {
               font-size: 14px;
               line-height: 19px;
+              text-align: left;
               color: #66daff;
               width: 53px;
               top: -19px;
@@ -315,6 +361,7 @@
               opacity: 0;
 
               @include mq(s) {
+                text-align: center;
                 top: calc(100% + 5px);
                 left: 50%;
                 transform: translateX(-50%);
@@ -337,46 +384,66 @@
             &:first-child {
 
               &:before {
-                content: "41";
+                content: "40 ";
               }
 
               &:after {
-                content: "27.5 см.";
+                content: "26.5см";
               }
             }
 
             &:nth-child(2) {
 
               &:before {
-                content: "42";
+                content: "41";
+              }
+
+              &:after {
+                content: "27.5см";
               }
             }
 
             &:nth-child(3) {
 
               &:before {
-                content: "43";
+                content: "42";
+              }
+
+              &:after {
+                content: "28см";
               }
             }
 
             &:nth-child(4) {
 
               &:before {
-                content: "44";
+                content: "43";
+              }
+
+              &:after {
+                content: "28.5см";
               }
             }
 
             &:nth-child(5) {
 
               &:before {
-                content: "45";
+                content: "44";
+              }
+
+              &:after {
+                content: "29см";
               }
             }
 
             &:last-child {
 
               &:before {
-                content: "46";
+                content: "45";
+              }
+
+              &:after {
+                content: "29.5см";
               }
             }
 
@@ -412,6 +479,11 @@
           position: static;
           text-align: center;
           margin-top: 15px;
+        }
+
+        @include mq(xs) {
+          width: 73%;
+          margin: 15px auto 0;
         }
 
         span {
@@ -526,6 +598,78 @@
             }
           }
         }
+
+        .size {
+
+          span {
+
+            &:first-child {
+
+              &:before {
+                content: "37";
+              }
+
+              &:after {
+                content: "24см";
+              }
+            }
+
+            &:nth-child(2) {
+
+              &:before {
+                content: "38";
+              }
+
+              &:after {
+                content: "24.5см";
+              }
+            }
+
+            &:nth-child(3) {
+
+              &:before {
+                content: "39";
+              }
+
+              &:after {
+                content: "25см";
+              }
+            }
+
+            &:nth-child(4) {
+
+              &:before {
+                content: "40";
+              }
+
+              &:after {
+                content: "26см";
+              }
+            }
+
+            &:nth-child(5) {
+
+              &:before {
+                content: "41";
+              }
+
+              &:after {
+                content: "26.5см";
+              }
+            }
+
+            &:last-child {
+
+              &:before {
+                content: "42";
+              }
+
+              &:after {
+                content: "27.5см";
+              }
+            }
+          }
+        }
       }
 
       &:before, &:after {
@@ -583,6 +727,10 @@
         padding: 15px 25px;
       }
 
+      @include mq(xs) {
+        padding: 15px 12px;
+      }
+
       h4 {
         text-transform: uppercase;
         margin: 0 0 60px 245px;
@@ -619,6 +767,19 @@
           position: static;
           margin: 0 auto;
           transform: none;
+        }
+
+        @include mq(xs) {
+          width: 65%;
+          min-width: 173px;
+          max-width: 228px;
+        }
+
+        img {
+
+          @include mq(xs) {
+            width: 100%;
+          }
         }
       }
 

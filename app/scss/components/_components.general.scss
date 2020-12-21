@@ -139,6 +139,11 @@ h4 {
 h5 {
   font-size: inherit;
   line-height: inherit;
+
+  @include mq(xs) {
+    font-size: 16px;
+    line-height: 22px;
+  }
 }
 
 p {
@@ -235,6 +240,11 @@ p {
 .to-order {
   max-width: 300px;
 
+  @include mq(xs) {
+    width: 100%;
+    max-width: 390px;
+  }
+
   a {
     padding: 14px 0 13px;
   }
@@ -308,4 +318,71 @@ p {
     width: 653px;
     height: 1177px;
   }
+}
+
+a.bucket {
+  width: 90px;
+  height: 90px;
+  background: #dff029;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 999;
+  transition: all 0.5s ease-in-out;
+
+  @include mq(xs) {
+    right: 15px;
+  }
+
+  &:after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 44px;
+    background: url("../img/bucket.png") no-repeat center/cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+ul.slick-dots {
+  display: inline-flex;
+  justify-content: center;
+
+  li {
+    box-sizing: border-box;
+    width: 7px;
+    height: 7px;
+    border: 1px solid #60697a;
+    background: transparent;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 0 4.5px;
+    transition: all 0.3s ease-in-out;
+
+    button {
+      display: none;
+    }
+
+    &.slick-active {
+      background: #60697a;
+    }
+  }
+}
+
+.body-filter {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0);
+  z-index: -5;
+  transition: all 0.25s ease-in-out;
 }

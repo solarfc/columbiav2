@@ -18,6 +18,10 @@
     display: flex;
     justify-content: space-between;
 
+    @include mq(s) {
+      display: none;
+    }
+
     a {
       width: 20%;
       max-width: 360px;
@@ -44,6 +48,40 @@
           box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
         }
       }
+    }
+  }
+
+  &__mobile {
+    display: none;
+    position: relative;
+    z-index: 11;
+
+    @include mq(s) {
+      display: block;
+    }
+
+    .slick-track {
+      display: flex;
+      align-items: center;
+    }
+
+    &-item {
+
+      a {
+        border-radius: 20px;
+
+        img {
+          width: 100%;
+          border-radius: inherit;
+        }
+      }
+    }
+
+    ul.slick-dots {
+      display: flex;
+      margin-top: -20px;
+      position: relative;
+      z-index: 20;
     }
   }
 }

@@ -58,6 +58,10 @@
         margin: 0 auto;
       }
 
+      @include mq(xs) {
+        display: block;
+      }
+
       &-block {
         text-align: center;
 
@@ -66,18 +70,37 @@
           margin-bottom: 35px;
         }
 
+        @include mq(xs) {
+          width: 100%;
+        }
+
         img {
 
         }
 
         p {
           color: #fff;
+
+          br {
+
+            @include mq(md) {
+              display: none;
+            }
+
+            @include mq(s) {
+              display: block;
+            }
+          }
         }
 
         &:nth-of-type(3) {
 
-          @include mq(xs) {
+          @include mq(s) {
             margin-bottom: 0;
+          }
+
+          @include mq(xs) {
+            margin-bottom: 35px;
           }
         }
 
@@ -119,6 +142,40 @@
         @include mq(md) {
           margin: 15px auto;
           text-align: center;
+        }
+
+        @include mq(s) {
+          text-align: left;
+        }
+
+        span {
+
+          &.new-price {
+            position: relative;
+            display: inline-block;
+
+            &:after {
+
+              @include mq(s) {
+                content: "";
+                display: block;
+                width: 76px;
+                height: 66px;
+                background: url("../img/header/arrow.png") no-repeat center/cover;
+                position: absolute;
+                top: -10px;
+                right: -76px;
+                transform: rotate(32.66deg);
+              }
+
+              @include mq(xs) {
+                width: 47px;
+                height: 41px;
+                top: -5px;
+                right: -47px;
+              }
+            }
+          }
         }
       }
 
@@ -164,6 +221,10 @@
           left: -5%;
         }
 
+        @include mq(xs) {
+          margin: 0 0 -52px;
+        }
+
         img {
           width: 100%;
         }
@@ -182,6 +243,11 @@
           @include mq(s) {
             top: 41%;
             right: 15%;
+          }
+
+          @include mq(xs) {
+            top: 20%;
+            right: 12.28%;
           }
         }
       }
