@@ -4,6 +4,11 @@ console.log(`width ${myWidth} \n height ${myHeight}`);
 
 window.onload = function () {
 
+    setTimeout(() => {
+        document.querySelector('html').style.overflowY = 'scroll';
+        document.querySelector('.loader').style.cssText = 'opacity: 0; z-index: -5;';
+    }, 2000);
+
     /*
         increase date
      */
@@ -185,8 +190,8 @@ window.onload = function () {
     });
 
     /*
-    send feedback
- */
+        send feedback
+     */
 
     const bodyFilter = document.querySelector('.body-filter'),
         openFeedback = document.querySelector('h5.send'),
@@ -248,8 +253,8 @@ window.onload = function () {
     });
 
     /*
-    toggle bucket
- */
+        toggle bucket
+     */
 
     const toggleBucket = () => {
         let bucket = document.querySelector('a.bucket'),

@@ -5,9 +5,14 @@ var myWidth = window.innerWidth,
 console.log("width ".concat(myWidth, " \n height ").concat(myHeight));
 
 window.onload = function () {
+  setTimeout(function () {
+    document.querySelector('html').style.overflowY = 'scroll';
+    document.querySelector('.loader').style.cssText = 'opacity: 0; z-index: -5;';
+  }, 2000);
   /*
       increase date
    */
+
   var today = new Date(),
       tomorrow = new Date(),
       day,
@@ -175,8 +180,8 @@ window.onload = function () {
     nextArrow: $('.next-arrow')
   });
   /*
-  send feedback
-  */
+      send feedback
+   */
 
   var bodyFilter = document.querySelector('.body-filter'),
       openFeedback = document.querySelector('h5.send'),
@@ -232,8 +237,8 @@ window.onload = function () {
     toggleFeedback(true);
   });
   /*
-  toggle bucket
-  */
+      toggle bucket
+   */
 
   var toggleBucket = function toggleBucket() {
     var bucket = document.querySelector('a.bucket'),

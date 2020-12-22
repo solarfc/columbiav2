@@ -312,6 +312,8 @@ p.title {
   width: 112px;
   height: 212px;
   background: url("../img/sale.png") no-repeat center/cover;
+  -webkit-animation: swing 6.5s ease-in-out infinite;
+          animation: swing 6.5s ease-in-out infinite;
 }
 
 @media (max-width: 767px) {
@@ -370,6 +372,36 @@ p.title {
   -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
           transform: translateX(-50%);
+}
+
+@-webkit-keyframes swing {
+  0% {
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+  }
+  50% {
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
+  }
+  100% {
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+  }
+}
+
+@keyframes swing {
+  0% {
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+  }
+  50% {
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
+  }
+  100% {
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+  }
 }
 
 .decor {
@@ -468,6 +500,48 @@ ul.slick-dots li.slick-active {
   -webkit-transition: all 0.25s ease-in-out;
   -o-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
+}
+
+.loader {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #60697a;
+  z-index: 99999;
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.loader__snow {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url("../img/snowflake1.png"), url("../img/snowflake2.png"), url("../img/snowflake3.png");
+  -webkit-animation: snow 20s linear infinite;
+          animation: snow 20s linear infinite;
+}
+
+@-webkit-keyframes snow {
+  0% {
+    background-position: 0 0, 0 0, 0 0;
+  }
+  100% {
+    background-position: 500px 1000px, 400px 400px, 300px 300px;
+  }
+}
+
+@keyframes snow {
+  0% {
+    background-position: 0 0, 0 0, 0 0;
+  }
+  100% {
+    background-position: 500px 1000px, 400px 400px, 300px 300px;
+  }
 }
 
 /*
@@ -1304,7 +1378,6 @@ ul.slick-dots li.slick-active {
   .video:before {
     width: 1713px;
     height: 1285px;
-    right: -320px;
   }
 }
 
@@ -2826,6 +2899,8 @@ textarea:-webkit-autofill:focus,
     -webkit-transform: rotate(30deg);
         -ms-transform: rotate(30deg);
             transform: rotate(30deg);
+    -webkit-animation: none;
+            animation: none;
   }
 }
 
