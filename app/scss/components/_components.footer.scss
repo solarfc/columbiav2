@@ -3,6 +3,21 @@
  */
 
 .footer {
-  height: 55px;
   background: #464f62;
+  padding: 15px 0;
+
+  p {
+    color: white;
+    position: relative;
+    z-index: 50;
+
+    @include mq(md) {
+      text-align: center;
+    }
+
+    a {
+      display: inline-block;
+      color: inherit;
+    }
+  }
 }

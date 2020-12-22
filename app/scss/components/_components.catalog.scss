@@ -85,7 +85,7 @@
           font-family: inherit;
           font-size: inherit;
           line-height: inherit;
-          color: inherit;
+          color: #fff !important;
           opacity: 1;
         }
 
@@ -197,10 +197,6 @@
         }
       }
 
-      .price {
-
-      }
-
       &__img {
 
         img.big {
@@ -234,6 +230,7 @@
             width: 29%;
             max-width: 157px;
             border-radius: 20px;
+            transition: all 0.5s ease-in-out;
 
             @include mq(xs) {
               width: 31%;
@@ -244,6 +241,10 @@
             img {
               width: 100%;
               border-radius: inherit;
+            }
+
+            &:hover {
+              transform: scale(1.2);
             }
           }
         }
@@ -356,8 +357,8 @@
               text-align: left;
               color: #66daff;
               width: 53px;
-              top: -19px;
-              right: -53px;
+              top: -23px;
+              left: 0;
               opacity: 0;
 
               @include mq(s) {
@@ -482,7 +483,7 @@
         }
 
         @include mq(xs) {
-          width: 73%;
+          width: 83%;
           margin: 15px auto 0;
         }
 

@@ -19,7 +19,7 @@
     .decor {
       background: url("../img/review/line.png") no-repeat center/cover;
       top: -263.23px;
-      right: -563px;
+      right: -583px;
 
       @include mq(md) {
         display: none;
@@ -113,10 +113,6 @@
             @include mq(md) {
               margin-bottom: 16px;
             }
-          }
-
-          p {
-
           }
         }
 
