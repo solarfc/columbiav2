@@ -314,6 +314,9 @@ p.title {
   background: url("../img/sale.png") no-repeat center/cover;
   -webkit-animation: swing 6.5s ease-in-out infinite;
           animation: swing 6.5s ease-in-out infinite;
+  -webkit-transform-origin: top center;
+      -ms-transform-origin: top center;
+          transform-origin: top center;
 }
 
 @media (max-width: 767px) {

@@ -260,6 +260,7 @@ p {
   height: 212px;
   background: url("../img/sale.png") no-repeat center/cover;
   animation: swing 6.5s ease-in-out infinite;
+  transform-origin: top center;
 
   @include mq(s) {
     width: 91px;
